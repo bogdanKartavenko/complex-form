@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Complex-form</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="title">Continue entering data</h1>
+        <form>
+            <div class="horizontal__wrapper horizontal__wrapper--top">
+                <div class="box">
+                    <label class="input__desc" for="firstName">First Name</label>
+                    <input class="input" type="name" required id="firstName" placeholder="Pavel">
+                </div>
+                <div class="box">
+                    <label class="input__desc" for="lastName">Last Name</label>
+                    <input class="input" type="name" required id="lastName" placeholder="Tselyuko">
+                </div>
+            </div>
+            <div class="vertical__wrapper">
+                <label class="input__desc" for="phone">Phone Number</label>
+                <input class="input" type="phone" minlength="9" maxlength="12" required id="phone"
+                    placeholder="+1 (484) 2918858">
+                <label class="input__desc" for="country">Country</label>
+                <input class="input" type="text" required id="country" placeholder="USA">
+            </div>
+            <div class="horizontal__wrapper horizontal__wrapper--bottom">
+                <div class="box">
+                    <label class="input__desc" for="city">City</label>
+                    <input class="input" type="text" required id="city" placeholder="New York">
+                </div>
+                <div class="box">
+                    <label class="input__desc" for="street">Street</label>
+                    <input class="input" type="text" required id="street" placeholder="Wall St">
+                </div>
+            </div>
+            <div class="gender__wrapper">
+                <div class="text">Legal Gender</div>
+                <div class="horizontal__wrapper">
+                    <div class="radio__box--top">
+                        <input class="input__radio" type="radio" id="male" name="gender">
+                        <label class="label__radio" for="male">Male</label>
+                    </div>
+                    <div class="radio__box--top">
+                        <input class="input__radio" type="radio" id="female" name="gender">
+                        <label class="label__radio" for="female">Female</label>
+                    </div>
+                    <div class="radio__box--top">
+                        <input class="input__radio" type="radio" id="other" name="gender">
+                        <label class="label__radio" for="other">Other</label>
+                    </div>
+                </div>
+            </div>
+            <div class="vertical__wrapper">
+                <div class="text">Notify me about...</div>
+                <div class="radio__box--bottom">
+                    <input class="input__radio" type="radio" id="about" name="about">
+                    <label class="label__radio" for="about">All new messages</label>
+                </div>
+                <div class="radio__box--bottom">
+                    <input class="input__radio" type="radio" id="aboutTwo" name="about">
+                    <label class="label__radio" for="aboutTwo">Direct messages, mentions & keywords</label>
+                </div>
+                <div class="radio__box--bottom">
+                    <input class="input__radio" type="radio" id="aboutThree" name="about">
+                    <label class="label__radio" for="aboutThree">Nothing</label>
+                </div>
+            </div>
+            <div class="checkbox__wrapper">
+                <label class="checkbox__label" for="checkbox">Notify me about replies to threads I’m following
+                    <input class="checkbox__input" type="checkbox" id="checkbox">
+                    <span class="checkbox__style"></span>
+                </label>
+            </div>
+            <button class="button">Start Application</button>
+        </form>
+    </div>
+</body>
+
+</html>
