@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap');
+
+* {
+    font-family: 'Public Sans';
+}
+
+.wrapper {
+    max-width: 586px;
+    width: 100%;
+    margin: 119px auto;
+}
+
+.title {
+    font-family: 'Work Sans';
+    font-weight: 700;
+    font-size: 2.625rem;
+    line-height: 49px;
+    letter-spacing: -0.02em;
+    margin-bottom: 42px;
+}
+
+.horizontal {
+    display: flex;
+}
+
+.horizontal__top {
+    margin-bottom: 18px;
+}
+
+.horizontal__bottom {
+    margin-bottom: 40px;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.input__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input__form:nth-of-type(1) {
+    margin-right: 16px;
+}
+
+.input__label {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 14px;
+    color: #8A8E94;
+    margin-bottom: 6px;
+}
+
+.input__input {
+    border: none;
+    padding: 19px 20px 18px;
+    background-color: #F8F8F8;
+    border-radius: 4px;
+}
+
+.input__input:hover {
+    background-color: #EDF9F5;
+}
+
+.input__input:focus {
+    border: none;
+    outline: 1px solid #59D4AD;
+    background-color: #F8F8F8;
+}
+
+.input--phone {
+    margin-bottom: 18px;
+}
+
+.gender__wrapper {
+    margin-bottom: 40px;
+}
+
+.radio__box--top {
+    position: relative;
+    padding: 6px 28px 5px 0px;
+}
+
+.radio__box--bottom {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.radio__box--bottom:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.input__radio,
+.input__radio:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.input__radio:checked+.label__radio,
+.input__radio:not(:checked)+.label__radio {
+    position: relative;
+    cursor: pointer;
+    left: 20px;
+    line-height: 20px;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 19px;
+    color: #0F0F0F;
+}
+
+.input__radio:checked+.label__radio::before,
+.input__radio:not(:checked)+.label__radio::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: -20px;
+    border: 1px solid black;
+    border-radius: 100%;
+    background: #fff;
+}
+
+.input__radio:checked+.label__radio::after,
+.input__radio:not(:checked)+.label__radio::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: black;
+    position: absolute;
+    top: 4px;
+    left: -16px;
+    border-radius: 100%;
+    transition: all 0.2s ease;
+}
+
+.input__radio:not(:checked)+.label__radio::after {
+    opacity: 0;
+}
+
+.input__radio:checked+.label__radio::after {
+    opacity: 1;
+}
+
+.input__radio:focus {
+ border:1px solid   #48C09A
+}
+
+.text {
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 16px;
+    color: #8A8E94;
+    margin-bottom: 16px;
+}
+
+.checkbox__wrapper {
+    border-top: 1px solid #E0E0E0;
+    max-width: 375px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.checkbox__label {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    cursor: pointer;
+    margin: 24px 0 56px;
+}
+
+.checkbox__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    top: 25px;
+    left: 0;
+    height: 0px;
+    width: 0px;
+}
+
+.checkbox__style {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background-color: white;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.checkbox__label:hover~.checkbox__style {
+    background-color: white;
+}
+
+.checkbox__label .checkbox__input:checked~.checkbox__style {
+    background-color: #000000;
+}
+
+.checkbox__style:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox__label .checkbox__input:checked~.checkbox__style:after {
+    display: block;
+}
+
+.checkbox__label .checkbox__style:after {
+    left: 5px;
+    top: 1px;
+    width: 3px;
+    height: 8px;
+    border: 1px solid white;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+}
+
+.button {
+    border: none;
+    padding: 20px 20px 21px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 24px;
+    background-color: #59D4AD;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background-color: #48C09A;
+}
+
+.button:focus {
+    outline: 1px solid black;
+}
