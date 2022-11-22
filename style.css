@@ -20,35 +20,35 @@
     margin-bottom: 42px;
 }
 
-.horizontal__wrapper {
+.horizontal {
     display: flex;
 }
 
-.horizontal__wrapper--top {
+.horizontal__top {
     margin-bottom: 18px;
 }
 
-.horizontal__wrapper--bottom {
+.horizontal__bottom {
     margin-bottom: 40px;
 }
 
-.vertical__wrapper {
+.vertical {
     display: flex;
     flex-direction: column;
     margin-bottom: 18px;
 }
 
-.box {
+.input__form {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.box:nth-of-type(1) {
+.input__form:nth-of-type(1) {
     margin-right: 16px;
 }
 
-.input__desc {
+.input__label {
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 14px;
@@ -56,24 +56,25 @@
     margin-bottom: 6px;
 }
 
-.input {
+.input__input {
     border: none;
     padding: 19px 20px 18px;
     background-color: #F8F8F8;
     border-radius: 4px;
 }
 
-.input:hover {
+.input__input:hover {
     background-color: #EDF9F5;
 }
 
-.input:focus {
+.input__input:focus {
     border: none;
     outline: 1px solid #59D4AD;
+    background-color: #F8F8F8;
 }
 
-.input::placeholder {
-    color: #000000;
+.input--phone {
+    margin-bottom: 18px;
 }
 
 .gender__wrapper {
@@ -82,33 +83,16 @@
 
 .radio__box--top {
     position: relative;
-    display: inline-block;
-    padding: 6px 28px 5px 10px;
+    padding: 6px 28px 5px 0px;
 }
 
 .radio__box--bottom {
-    display: inline-block;
-    padding: 6px 28px 5px 10px;
+    position: relative;
     margin-bottom: 16px;
-}
-
-.radio__box--top:hover {
-    outline: 1px solid #59D4AD;
-    border-radius: 4px;
-}
-
-.radio__box--bottom:hover {
-    outline: 1px solid #59D4AD;
-    border-radius: 4px;
 }
 
 .radio__box--bottom:nth-last-child(1) {
     margin-bottom: 0;
-}
-
-
-.label__radio:hover {
-    color: #59D4AD
 }
 
 .input__radio,
@@ -161,6 +145,10 @@
 
 .input__radio:checked+.label__radio::after {
     opacity: 1;
+}
+
+.input__radio:focus {
+ border:1px solid   #48C09A
 }
 
 .text {
@@ -224,7 +212,7 @@
     display: none;
 }
 
-.checkbox__label input:checked~.checkbox__style:after {
+.checkbox__label .checkbox__input:checked~.checkbox__style:after {
     display: block;
 }
 
